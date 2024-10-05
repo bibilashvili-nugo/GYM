@@ -1,9 +1,9 @@
 import React from 'react'
-import Layout from '../layout/Layout'
+
 
 const Services = () => {
   return (
-    <Layout>Services</Layout>
+    <h1>services</h1>
   )
 }
 

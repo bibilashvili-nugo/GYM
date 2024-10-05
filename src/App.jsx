@@ -1,19 +1,22 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "./components/pages/Home";
-import Stories from "./components/pages/Stories";
-import Services from "./components/pages/Services";
-import Contact from "./components/pages/Contact";
-import NoPage from "./components/pages/NoPage";
+import Stories from "../pages/Stories";
+import Home from "../pages/Home";
+import Service from "../pages/Services";
+import Contact from "../pages/Contact";
+import NoPage from "../pages/NoPage";
+import Layout from "../ui/Layout";
 
 const App = () => {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/stories" element={<Stories />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NoPage />} />
+        <Route element={<Layout />}>  
+          <Route index element={<Home />} />
+          <Route path="/stories" element={<Stories />} />
+          <Route path="/services" element={<Service />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
       </Routes>
     </div>
   );

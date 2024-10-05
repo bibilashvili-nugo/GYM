@@ -1,9 +1,9 @@
 import React from 'react'
-import Layout from '../layout/Layout'
+
 
 const Contact = () => {
   return (
-    <Layout>Contact</Layout>
+   <div>contact</div>
   )
 }
 
